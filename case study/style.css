@@ -1,0 +1,702 @@
+/* font-family: "Indie Flower",
+cursive; */
+
+/* font-family: 'Quicksand', serif;
+font-weight: 500; */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    color: #a9d377;
+    background: #fff;
+}
+.container {
+    padding: 10px 10%;
+}
+.header{
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: fixed;
+}
+.head-col1{
+flex-basis: 45%;
+}
+.head-col2{
+flex-basis: 55%;
+}
+.head-col2 img{
+    width: 100%;
+}
+.header h1{
+    font-family: 'Indie Flower', cursive;
+    font-size: 11em;
+    font-weight: 500;
+    color: #a9d377;
+    text-align: center;
+    /* margin-top: 20px; */
+}
+.header p{
+font-family: 'Quicksand', cursive;
+    font-size: 3em;
+    font-weight: 500;
+    color: rgb(92, 214, 242);
+    text-align: center;
+
+    bottom: 0;
+}
+.active {
+    opacity: 1;
+    /* Show the content when it is in view */
+    transform: translateY(0);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.logo{
+    width: 100px;
+    z-index: 2;
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+}
+.heart {
+    animation: rotate 4s infinite;
+    position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+}
+
+@keyframes rotate {
+    0% {
+            transform: rotate(0deg);
+        }
+    
+        100% {
+            transform: rotate(360deg);
+        }
+}
+
+/* nav {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: #a9d377;
+    margin-top: auto;
+    width: 100%;
+} */
+/* 
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 30px;
+}
+
+nav ul li a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+    font-family: 'Quicksand', cursive;
+    padding: 100px;
+}
+nav ul li a:hover {
+    text-shadow: 0 0 5px rgb(255, 255, 255);
+    transition: text-shadow 1s ease;
+} */
+#challenges{ 
+    padding: 10px 10%;
+    position: relative;
+    background-color: white;
+}
+#challenges h1 {
+    font-family: 'Indie Flower', cursive;
+    font-size: 7em;
+    font-weight: 500;
+    color: #a9d377;
+    text-align: left;
+    margin-top: 40px;
+    vertical-align: middle;
+    margin-bottom: 10vh;
+    text-align: center;
+    position: relative;
+}
+#challenges h1::after{
+    content: "";
+    width: 60%;
+    height: 20px;
+    background-image: url(underline.svg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: -20%;
+    left: 20%;
+}
+p {
+    margin-bottom: 20px;
+    font-family: 'Quicksand', cursive;
+    font-size: 1.2em;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+}
+.challenges-columns h2{
+    font-family: 'Dancing Script', cursive;
+    font-size: 15em;
+    font-weight: 500;
+    color: rgb(92, 214, 242);
+}
+.challenges-columns p{
+    border-radius: 10px;
+    background-color: rgb(92, 214, 242);
+    padding: 5% 5%;
+}
+.col1, .col2{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.col1 h2{
+    flex-basis: 25%;
+    text-align: right;
+}
+.col1 p{
+    flex-basis: 60%;
+    text-align: left;
+    height: 60%;
+    justify-content: center;
+}
+.col2 h2 {
+    flex-basis: 25%;
+    text-align: left;
+}
+.col2 p {
+    flex-basis: 60%;
+    text-align: left;
+    height: 60%;
+    justify-content: center;
+
+}
+#process {
+    padding: 10px 10%;
+    position: relative;
+    background-color: white;
+}
+#process h1 {
+    font-family: 'Indie Flower', cursive;
+    font-size: 7em;
+    font-weight: 500;
+    color: #a9d377;
+    text-align: left;
+    margin-top: 40px;
+    vertical-align: middle;
+    margin-bottom: 10vh;
+    text-align: center;
+    position: relative;
+}
+#process h1::after {
+    content: "";
+    width: 60%;
+    height: 20px;
+    background-image: url(underline.svg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: 0%;
+    left: 20%;
+}
+.process-columns h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 7em;
+    font-weight: 500;
+    color: rgb(92, 214, 242);
+}
+
+.process-columns p {
+    border-radius: 10px;
+    background-color: rgb(92, 214, 242);
+    padding: 5% 5%;
+}
+
+.col3, .col5{
+display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    /* align-items: center; */
+    margin-bottom: 10vh;
+}
+.col3 h2 {
+    flex-basis: 25%;
+    text-align: right;
+    vertical-align: top;
+    margin-top: 0;
+}
+
+.col3 p {
+    flex-basis: 50%;
+    text-align: left;
+    height: fit-content;
+    /* justify-content: center; */
+}
+.col4 {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 10vh;
+}
+.col4 h2 {
+    flex-basis: 25%;
+    text-align: left;
+    /* vertical-align: top; */
+    /* margin-top: 0; */
+    align-items: center;
+}
+
+.process-imgs {
+    flex-basis: 40%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border-radius: 10px;
+    /* border: 5px solid rgb(92, 214, 242); */
+        padding: 5% 5%;
+}
+.process-imgs img{
+    width: 45%;
+    /* margin: 1%; */
+}
+.process-imgs img:hover{
+    transform: scale(2);
+    transition: transform 0.5s ease;
+}
+#bgimg img{
+    width: 100%;
+}
+#bgimg img:hover {
+    transform: scale(2);
+    transition: transform 0.5s ease;
+}
+.col5 h2 {
+    flex-basis: 25%;
+    text-align: right;
+    vertical-align: center;
+    /* margin-top: 0; */
+    justify-content: center;
+}
+
+.col5 p {
+    flex-basis: 50%;
+    text-align: left;
+    height: fit-content;
+    /* justify-content: center; */
+}
+#btn1, #btn2, #btn3, #btn4{
+    width: 200px;
+    height: 70px;
+    border-width: 4px;
+    border-radius: 35px;
+    font-size: 25px;
+    font-family: 'Quicksand', cursive;
+    font-weight: 500;
+    color: rgb(92, 214, 242);
+    cursor: pointer;
+    background-color: white;
+    border: 5px solid rgb(92, 214, 242);
+}
+#btn1:active, #btn2:active, #btn3:active, #btn4:active{
+    font-size: 23px;
+}
+.process-sounds {
+    flex-basis: 40%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.process-sounds button {
+margin-bottom: 10px;
+}
+.col6 {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 10vh;
+}
+.col6 h2 {
+    flex-basis: 25%;
+    text-align: left;
+    vertical-align: center;
+    /* margin-top: 0; */
+    justify-content: center;
+    font-size: 6em;
+}
+
+.insta-pic{
+    flex-basis: 50%;
+    text-align: left;
+    height: fit-content;
+}
+.insta-pic img{
+    width: 100%;
+}
+.insta-pic img:hover{
+    transform: scale(1.3);
+    transition: transform 0.5s ease;
+}
+.facebook-banner{
+    flex-basis: 100%;
+}
+.facebook-banner img{
+    width: 100%;
+}
+.facebook-banner img:hover{
+    transform: scale(1.3);
+    transition: transform 0.5s ease;
+}
+#outcome {
+    padding: 10px 10%;
+    position: relative;
+    background-color: white;
+}
+
+#outcome h1 {
+    font-family: 'Indie Flower', cursive;
+    font-size: 7em;
+    font-weight: 500;
+    color: #a9d377;
+    text-align: left;
+    margin-top: 40px;
+    vertical-align: middle;
+    margin-bottom: 10vh;
+    text-align: center;
+    position: relative;
+}
+
+#outcome h1::after {
+    content: "";
+    width: 60%;
+    height: 20px;
+    background-image: url(underline.svg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: 0;
+    left: 20%;
+}
+
+p {
+    margin-bottom: 20px;
+    font-family: 'Quicksand', cursive;
+    font-size: 1.2em;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+}
+#outcome h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 6em;
+    font-weight: 500;
+    color: rgb(92, 214, 242);
+    text-align: center; 
+}
+
+#outcome p {
+    border-radius: 10px;
+    background-color: rgb(92, 214, 242);
+    padding: 5% 5%;
+    text-align: center;
+}
+.col7 {
+    display: flex;
+    flex-wrap: wrap;
+}
+.col8 h2 {
+    flex-basis: 25%;
+    text-align: right;
+    vertical-align: center;
+    /* margin-top: 0; */
+    justify-content: center;
+}
+
+.col8 p {
+    flex-basis: 50%;
+    text-align: left;
+    height: fit-content;
+    /* justify-content: center; */
+}
+.game-imgs {
+    flex-basis: 49%;
+    /* Adjust the width based on your preference */
+    display: flex;
+}
+
+.game-imgs img {
+    width: 100%;
+    margin-right: 18px;
+    /* Add some space between images */
+}
+.game-imgs img:hover{
+    transform: scale(1.3);
+    transition: transform 0.5s ease;
+}
+
+.outcome-loading-page {
+    flex-basis: 100%;
+    margin-bottom: 18px;
+}
+
+.outcome-loading-page img {
+    width: 100%;
+}
+
+.outcome-loading-page img:hover {
+    transform: scale(1.3);
+    transition: transform 0.5s ease;
+}
+@media (max-width: 600px) {
+    .game-imgs {
+        flex-basis: 100%;
+        /* Full width on smaller screens */
+        flex-direction: column;
+    }
+
+    .game-imgs img {
+        margin-right: 0;
+        /* Remove margin on smaller screens */
+        margin-bottom: 10px;
+        /* Add some space between images on smaller screens */
+    }
+        .row {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            position: fixed;
+        }
+    
+        .head-col1 {
+            flex-basis: 100%;
+        }
+    
+        .head-col2 {
+            flex-basis: 100%;
+        }
+    
+        .head-col2 img {
+            width: 100%;
+        }
+    
+        .header h1 {
+            font-family: 'Indie Flower', cursive;
+            font-size: 4em;
+            font-weight: 500;
+            color: #a9d377;
+            text-align: center;
+            /* margin-top: 20px; */
+        }
+    
+        .header p {
+            font-family: 'Quicksand', cursive;
+            font-size: 1em;
+            font-weight: 500;
+            color: rgb(92, 214, 242);
+            text-align: center;
+            bottom: 0;
+        }
+                #challenges h1 {
+                    font-family: 'Indie Flower', cursive;
+                    font-size: 4em;
+                    font-weight: 500;
+                    color: #a9d377;
+                    text-align: left;
+                    margin-top: 40px;
+                    vertical-align: middle;
+                    margin-bottom: 10vh;
+                    text-align: center;
+                    position: relative;
+                }
+        
+                #challenges h1::after {
+                    content: "";
+                    width: 60%;
+                    height: 20px;
+                    background-image: url(underline.svg);
+                    background-position: center;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    position: absolute;
+                    bottom: -20%;
+                    left: 20%;
+                }
+        
+                p {
+                    margin-bottom: 20px;
+                    font-family: 'Quicksand', cursive;
+                    font-size: 1em;
+                    font-weight: 500;
+                    color: rgb(255, 255, 255);
+                }
+        
+                .challenges-columns h2 {
+                    font-family: 'Dancing Script', cursive;
+                    font-size: 10em;
+                    font-weight: 500;
+                    color: rgb(92, 214, 242);
+                }
+                #process h1 {
+    font-family: 'Indie Flower', cursive;
+    font-size: 4em;
+    font-weight: 500;
+    color: #a9d377;
+    text-align: left;
+    margin-top: 40px;
+    vertical-align: middle;
+    margin-bottom: 10vh;
+    text-align: center;
+    position: relative;
+}
+.process-columns h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3em;
+    font-weight: 500;
+    color: rgb(92, 214, 242);
+}
+.col3,
+.col5 {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 10vh;
+}
+.col3 h2 {
+    flex-basis: 100%;
+    text-align: center;
+    vertical-align: top;
+    margin-top: 0;
+}
+
+.col3 p {
+    flex-basis: 100%;
+    text-align: left;
+    height: fit-content;
+    /* justify-content: center; */
+}
+.col4 {
+    flex-direction: column-reverse;
+    align-items: center;
+}
+.col4 h2 {
+    flex-basis: 25%;
+    text-align: center;
+    align-items: center;
+}
+.process-imgs {
+    flex-basis: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border-radius: 10px;
+    /* border: 5px solid rgb(92, 214, 242); */
+    padding: 5% 5%;
+}
+.process-imgs img {
+    width: 45%;
+}
+.col5{
+    align-items: center;
+}
+.col5 h2{
+    text-align: center;
+    flex-basis: 100%;
+}
+#btn1,
+#btn2,
+#btn3,
+#btn4 {
+    width: 100%;
+    height: 35 px;
+    border-width: 4px;
+    border-radius: 35px;
+    font-size: 15px;
+    font-family: 'Quicksand', cursive;
+    font-weight: 500;
+    color: rgb(92, 214, 242);
+    cursor: pointer;
+    background-color: white;
+    border: 5px solid rgb(92, 214, 242);
+}
+
+#btn1:active,
+#btn2:active,
+#btn3:active,
+#btn4:active {
+    font-size: 13px;
+}
+.process-sounds {
+    flex-basis: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.process-sounds button {
+   margin-top: 10px;
+}
+.col6 {
+    flex-direction: column-reverse;
+    align-items: center;
+}
+
+.col6 h2 {
+    flex-basis: 25%;
+    text-align: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.insta-pic {
+    flex-basis: 100%;
+    text-align: left;
+    height: fit-content;
+    margin-bottom: -40px;
+}
+#outcome h1 {
+    font-family: 'Indie Flower', cursive;
+    font-size: 4em;
+    font-weight: 500;
+    color: #a9d377;
+    text-align: left;
+    margin-top: 40px;
+    vertical-align: middle;
+    margin-bottom: 10vh;
+    text-align: center;
+    position: relative;
+}
+#outcome h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3em;
+    font-weight: 500;
+    color: rgb(92, 214, 242);
+    text-align: center;
+}
+}

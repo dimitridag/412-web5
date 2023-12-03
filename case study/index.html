@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+    </style>
+    <title>Froggy Feast</title>
+</head>
+<body>
+<div><img src="img/Logo.png" alt="" class="logo"></div>
+    <div class="header">
+        <!-- <div class="container"> -->
+            <div class="row">
+                <div class="head-col1">
+        <h1>Froggy Feast</h1>
+        <p>Case<span><a href="#challenges"><img src="img/heart.png" alt="" class="heart"></span></a>Study</p>
+        </div>
+        <div class="head-col2"><img src="./img/profile.png" alt=""></div>
+        </div>
+        <!-- </div> -->
+        <!-- <nav>
+        <ul id="sidemenu">
+            <li><a href="#challenges">Challenges</a></li>
+            <li><a href="#process">Process</a></li>
+            <li><a href="#outcome">Outcome</a></li>
+            <i class="fas fa-times" onclick="closemenu()"></i>
+        </ul>
+        <i class="fas fa-bars" onclick="openmenu()"></i>
+        </nav> -->
+    </div>
+    
+    
+<main>
+    <div id="challenges">
+        <div class="container">
+            <h1>Challenges</h1>
+            <div class="challenges-columns">
+                <div class="col1">
+                <h2>1</h2>
+            <p>First, the assignment entailed creating a responsive single-player game capable of seamlessly adapting to both mobile and
+            web interfaces.</p>
+            </div>
+            <div class="col2">
+            <p>Second, it involved the design and development of visually captivating promotional graphics to effectively market the
+            game to the intended audience.</p>
+            <h2>2</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="process">
+        <div class="container">
+            <h1>Process</h1>
+            <div class="process-columns">
+            <div class="col3">
+                    <h2>Game Conception</h2>
+                    <p>I envisioned an exciting endless scroller game set on a river, where players
+                    guide a frog character through the journey of dodging lily pads and capturing flies to score points. The game introduced
+                    a three-heart mechanism and a time limit, challenging players to navigate with precision and speed.
+                    <br>
+                    <br>The ultimate goal is to earn as many points as possible while striving to survive as long as possible, adding
+                        layers of
+                        challenge and excitement to the gameplay.</p>
+                </div>
+            
+            <div class="container">
+                <div class="col4">
+                    <div class="process-imgs">
+                        <img src="img/player.png" alt="">
+                        <img src="img/heart.png" alt="">
+                        <img src="img/fly.png" alt="">
+                        <img src="img/lily.png" alt="">
+                        <img src="img/win3.png" alt="" id="win3">
+                        <img src="img/background.png" alt="" id="bgimg">
+                    </div>
+                    <h2>Visual Graphics</h2>
+                </div>
+            </div>
+            <div class="container">
+                <div class="col5">
+                    <h2>Sound Effects</h2>
+                    <div class="process-sounds">
+                        <button id="btn1" onclick="toggleSound(sound1)">Point Earned </button>
+                        <button id="btn2" onclick="toggleSound(sound2)">Point Lost</button>
+                        <button id="btn3" onclick="toggleSound(sound3)">Game Over</button>
+                        <button id="btn4" onclick="toggleSound(sound4)">River Sound</button>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="col6">
+                <div class="insta-pic">
+               <img src="img/feed post.png" alt="">
+            </div>
+            <h2>Promotional Graphics</h2>
+            </div>
+            <div class="facebook-banner">
+                <img src="img/cover.png" alt="">
+            </div>
+            </div>
+        </div>
+    </div>
+    <div id="outcome">
+        <div class="container">
+            <h1>Outcome</h1>
+            <div class="col8">
+                <h2>Feedback</h2>
+                <p>The game plays well. It is a bit difficult to play on mobile because of the size of the player sprite.
+                    Interesting sounds. Kinda funny. - Hugo</p>
+            </div>
+                <div class="col7">
+                    <div class="outcome-loading-page">
+                        <img src="img/Starting Screen.png" alt="">
+                    </div>
+                    <div class="game-imgs">
+                    <img src="img/Active Game.png" alt="">
+                    <img src="img/Game Over.png" alt="">
+                    </div>
+                </div>
+               
+        </div>
+    </div>
+    
+</main> 
+<script>
+    var sound1 = new Audio();
+    sound1.src = "img/point.mp3";
+    var sound2 = new Audio();
+        sound2.src = "img/point-lost.mp3";
+        var sound3 = new Audio();
+            sound3.src = "img/game-over.mp3";
+            var sound4 = new Audio();
+                sound4.src = "img/river.mp3";
+                  function toggleSound(sound) {
+                        if (sound.paused) {
+                            sound.play();
+                        } else {
+                            sound.pause();
+                            sound.currentTime = 0; // Reset the audio to the beginning
+                        }
+                    }
+</script>    
+</body>
+</html>
