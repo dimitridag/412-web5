@@ -1,275 +1,507 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dimitri Dagres Portfolio</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Aboreto&family=Cutive+Mono&family=Space+Mono&display=swap"
-        rel="stylesheet">
-    <script src="https://kit.fontawesome.com/6b0af4bcb3.js" crossorigin="anonymous"></script>
-</head>
-<body>
-    <div id="header">
-        <div class="container">
-        <nav>
-            <img src="./img/Logo.png" alt="" class="logo">
-            <ul id="sidemenu">
-                <!-- <li><a href="#header">Home</a></li> -->
-                <li><a href="#about">About</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <i class="fas fa-times" onclick="closemenu()"></i>
-            </ul>
-            <i class="fas fa-bars" onclick="openmenu()"></i>
-        </nav>
-        <div class="header-text">
-            <p>Graphic Designer</p>
-            <h1>Hi, I'm&nbsp;<span> Dimitri Dagres</span><br> Welcome to my Portfolio!
-            </h1>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dimitri Dagres Portfolio</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Aboreto&family=Cutive+Mono&family=Space+Mono&display=swap"
+            rel="stylesheet">
+        <script src="https://kit.fontawesome.com/6b0af4bcb3.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div id="header">
+            <div class="container">
+            <nav>
+                <img src="./img/Logo.png" alt="" class="logo">
+                <ul id="sidemenu">
+                    <!-- <li><a href="#header">Home</a></li> -->
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>Graphic Designer</p>
+                <h1>Hi, I'm&nbsp;<span> Dimitri Dagres</span><br> Welcome to my Portfolio!
+                </h1>
+            </div>
+            </div>
         </div>
+        <!-- about -->
+        <div id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-1"><img src="./img/Portfolio.png" alt=""></div>
+                    <div class="about-col-2">
+                        <h1 class="sub-title">About Me</h1>
+                        <p>Hello! I am Dimitri Dagres,
+                        a 3rd-year student at
+                        Vanier College pursuing,
+                        and soon obtaining, a degree in Micromedia and Hyperpublishing. My primary areas of interest within the field of graphic
+                        design are illustration and packaging design.
+                        I have always demonstrated a strong attention to detail and persistence when working on projects. However, I am always
+                        open to new ideas and approaches to improve whatever work is being done!
+                        My collaborative spirit shines when working in groups to brainstorm new ideas on how to approach a project.
+                        I am eager to apply all the knowledge developed throughout these past years and to make an impact on the industry.
+                        The most important thing I have to offer an employer is my meticulous dedication to the craft and my readiness to learn
+                        and act!</p>
+                    
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                            <p class="tab-links" onclick="opentab('education')">Education</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>Graphic Design</span><br>Skilled with Adobe Creative Cloud Applications</li>
+                                <li><span>Office Systems Technology</span><br>Proficient in Microsoft Office Suite</li>
+                                <li><span>Web Development</span><br>Competent in WordPress, HTML and CSS</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="experience">
+                            <ul>
+                                <li><span>05/2020 - Ongoing</span><br>Clerk and Cashier Positions at Pharmaprix</li>
+                                <li><span>06/2021 - 08/2022</span><br>Postal Clerk at the Canadian Post Office</li>
+                                <li><span>06/2019 - 08/2020</span><br>Camp Counsellor for the Town of Mount Royal</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>2021 - 2023</span><br>Hypermedia and Micropublishing at Vanier College</li>
+                                <li><span>2015 - 2020</span><br>Diploma of Secondary Studies at Royal West Academy</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+            </div>
+            </div>
         </div>
-    </div>
-    <!-- about -->
-    <div id="about">
-        <div class="container">
-            <div class="row">
-                <div class="about-col-1"><img src="./img/Portfolio.png" alt=""></div>
-                <div class="about-col-2">
-                    <h1 class="sub-title">About Me</h1>
-                    <p>Hello! I am Dimitri Dagres,
-                    a 3rd-year student at
-                    Vanier College pursuing,
-                    and soon obtaining, a degree in Micromedia and Hyperpublishing. My primary areas of interest within the field of graphic
-                    design are illustration and packaging design.
-                    I have always demonstrated a strong attention to detail and persistence when working on projects. However, I am always
-                    open to new ideas and approaches to improve whatever work is being done!
-                    My collaborative spirit shines when working in groups to brainstorm new ideas on how to approach a project.
-                    I am eager to apply all the knowledge developed throughout these past years and to make an impact on the industry.
-                    The most important thing I have to offer an employer is my meticulous dedication to the craft and my readiness to learn
-                    and act!</p>
-                   
-                    <div class="tab-titles">
-                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
-                        <p class="tab-links" onclick="opentab('education')">Education</p>
+
+        <!-- portfolio -->
+
+        <div id="portfolio">
+            <div class="container">
+                <h1 class="sub-title" id="line">My Work</h1>
+                <div class="work-list">
+                    <div class="work" data-name="w-1">
+                        <img src="./img/Design DNA Dagres.png" alt="">
+                        <div class="layer">
+                            <h3>Design Dna</h3>
+                            <p>Tasked with creating a compilation of images representative of my design identity. I presented it in a clean and
+                            creative format. This project aimed to showcase a visual narrative that reflects my unique design style.</p>
+                            <br><p>Software Used:&nbsp;<em>Adobe InDesign</em></p>
+                        </div>
                     </div>
-                    <div class="tab-contents active-tab" id="skills">
-                        <ul>
-                            <li><span>Graphic Design</span><br>Skilled with Adobe Creative Cloud Applications</li>
-                            <li><span>Office Systems Technology</span><br>Proficient in Microsoft Office Suite</li>
-                            <li><span>Web Development</span><br>Competent in WordPress, HTML and CSS</li>
-                        </ul>
+                    <div class="work" data-name="w-2">
+                        <img src="./img/Analog Sketch-01.png" alt="">
+                        <div class="layer">
+                            <h3>Analog Sketch</h3>
+                            <p>Transforming a sketch into a graphic illustration. I recreated and colored the sketch to breathe new life into the
+                            original concept. The final illustration showcases a harmonious blend of traditional sketching and digital artistry.</p>
+                            <br>
+                            <p>Software Used:&nbsp;<em>Adobe Illustrator</em></p>
+                        </div>
                     </div>
-                    <div class="tab-contents" id="experience">
-                        <ul>
-                            <li><span>05/2020 - Ongoing</span><br>Clerk and Cashier Positions at Pharmaprix</li>
-                            <li><span>06/2021 - 08/2022</span><br>Postal Clerk at the Canadian Post Office</li>
-                            <li><span>06/2019 - 08/2020</span><br>Camp Counsellor for the Town of Mount Royal</li>
-                        </ul>
+                    <div class="work" data-name="w-3">
+                        <img src="./img/Affiche Prix Français Dagres copy.png" alt="">
+                        <div class="layer">
+                            <h3>Poster Advertisement</h3>
+                            <p>For the Prix Collégial du Cinéma Québécois 2024, I designed a promotional poster that captures the essence of the
+                            cinematic event. The visual elements aim to intrigue and invite participation in the celebration of Quebecois cinema.</p>
+                            <br>
+                            <p>Software Used:&nbsp;<em>Adobe Photoshop</em></p>
+                        </div>
                     </div>
-                    <div class="tab-contents" id="education">
-                        <ul>
-                            <li><span>2021 - 2023</span><br>Hypermedia and Micropublishing at Vanier College</li>
-                            <li><span>2015 - 2020</span><br>Diploma of Secondary Studies at Royal West Academy</li>
-                        </ul>
+                    <div class="work" data-name="w-4">
+                        <img src="./img/packaging design.png" alt="">
+                        <div class="layer">
+                            <h3>Vintage Packaging Design</h3>
+                            <p>For a soap brand, I delved into the Arts and Crafts design movement to inspire the creation of packaging. The resulting
+                            design blends vintage aesthetics with a modern touch, offering a unique and visually appealing product presentation.</p>
+                            <br>
+                            <p>Software Used:&nbsp;<em>Adobe Illustrator & Adobe Photoshop</em></p>
+                        </div>
                     </div>
-                </div>
+                    <div class="work" data-name="w-5">
+                        <img src="./img/Magazine Cover Layout Dimitri Dagres.png" alt="">
+                    
+                        <div class="layer">
+                            <h3>Magazine Cover</h3>
+                            <p>For a fictitious upscale real estate magazine, I created a captivating cover design that captures the essence of luxury
+                            living. The composition and visual elements work together to entice the audience and evoke a sense of sophistication.</p>
+                            <br>
+                            <p>Software Used:&nbsp;<em>Adobe InDesign</em></p>
+                        </div>
+                    </div>
+                    <div class="work" data-name="w-6">
+                        <img src="./img/Awareness Poster Dagres copy.png" alt="">
+                        <div class="layer">
+                            <h3>Awareness Poster</h3>
+                            <p>Addressing the urgent need to reduce greenhouse gas emissions, I created an awareness poster inspired by the World Wide
+                            Fund for Nature’s research. The poster visually communicates the effects of global warming on Polar Bears, aiming to
+                            inspire environmental consciousness.</p>
+                            <br>
+                            <p>Softwares Used:&nbsp;<em>Adobe Photoshop & Adobe InDesign</em></p>
+                        </div>
+                    </div>
+                    <div class="work" data-name="w-7">
+                        <img src="./img/Composition 2 copy.png" alt="">
+                        <div class="layer">
+                            <h3>Photo Composition</h3>
+                            <p>In this project, I created a realistic-looking photo composition by skillfully combining various subjects and components
+                            from separate photos. The result is a visually cohesive and compelling image that demonstrates my proficiency in photo
+                            manipulation.</p>
+                            <br>
+                            <p>Software Used:&nbsp;<em>Adobe Photoshop</em></p>
+                        </div>
+                    </div>
+                    <div class="work" data-name="w-8">
+                        <img src="./img/PSA Dagres Billboard copy.jpg" alt="">
+                        <div class="layer">
+                            <h3>Public Service Announcement</h3>
+                            <p>Tasked with creating a PSA poster for organ donation in Alberta. I approached the design with a focus on conveying a
+                            powerful and impactful message. The resulting poster serves as a visual call to action, encouraging awareness and
+                            participation in organ donation initiatives.</p>
+                            <p>Softwares Used:&nbsp;<em>Adobe Illustrator & Adobe Photoshop</em></p>
+                        </div>
+                    </div>
+                    <div class="work" data-name="w-9">
+                        <img src="./img/Amy Winehouse.png" alt="">
+                        <div class="layer">
+                            <h3>Amy Winehouse Album Cover</h3>
+                            <p>In my reimagined version of Amy Winehouse's "Back to Black" album cover, I used saturation to symbolize
+                                life's numbness
+                                and visually conveyed her struggle with drugs through the allure of drug-associated colors.</p>
+                            <br>
+                            <p>Software Used:&nbsp;<em>Adobe Photoshop</em></p>
+                        </div>
+                    </div>
+                    <!-- <div class="work">
+                        <img src="./img/Francophonie Dagres.png" alt="">
+                        <div class="layer">
+                            <h3>Francophonie Poster</h3>
+                            <p>Inspired by the theme "La Magie de Mots !" for La Francophonie 2023 at Vanier College, I designed a vibrant and engaging
+                            poster. The project aimed to celebrate the richness of language and cultural diversity.</p>
+                            <br>
+                            <p>Software Used:&nbsp;<em>Adobe Illustrator</em></p>
+                        </div>
+                    </div> -->
+                    <!-- <div class="work">
+                        <img src="./img/Isometric Illustration-01.png" alt="">
+                        <div class="layer">
+                            <h3>Isometric Illustration</h3>
+                            <p>Utilizing isometric techniques and incorporating 3D elements, I crafted an illustrative depiction of a room during a rainy evening. This
+                            project demonstrates my ability to employ innovative design methods, enhancing the visual narrative with depth and
+                            dimension to create compelling and dynamic visuals.</p>
+                            <br>
+                            <p>Software Used:&nbsp;<em>Adobe Illustrator</em></p>
+                        </div>
+                    </div> -->
                 
-          </div>
+                </div>
+            </div>
         </div>
-    </div>
 
-    <!-- portfolio -->
-
-    <div id="portfolio">
-        <div class="container">
-            <h1 class="sub-title" id="line">My Work</h1>
-            <div class="work-list">
-                <div class="work">
-                    <img src="./img/Design DNA Dagres.png" alt="">
-                    <div class="layer">
-                        <h3>Design Dna</h3>
-                        <p>Tasked with creating a compilation of images representative of my design identity. I presented it in a clean and
-                        creative format. This project aimed to showcase a visual narrative that reflects my unique design style.</p>
-                        <br><p>Application Used:&nbsp;<em>Adobe InDesign</em></p>
+        <!-- Work Preview -->
+        <div class="work-preview">
+            <div class="preview" data-target="w-1">
+                <div class="container">
+                    <i class="fas fa-times"></i>
+                    <div class="row">
+                        <div class="work-col-1"><img src="./img/Design DNA Dagres.png" alt=""></div>
+                        <div class="work-col-2">
+                            <h1 class="work-title">Design DNA</h1>
+                            <p>Tasked with creating a compilation of images representative of my design identity. I presented it in a clean and
+                                creative format. This project aimed to showcase a visual narrative that reflects my unique design style.</p>
+                            <br>
+                            <p>Software Used:&nbsp;<em>Adobe InDesign</em></p>
+                        </div>
                     </div>
                 </div>
-                <div class="work">
-                    <img src="./img/Analog Sketch-01.png" alt="">
-                    <div class="layer">
-                        <h3>Analog Sketch</h3>
+            </div>
+       
+
+
+            <div class="preview" data-target="w-2">
+                <div class="container">
+                    <i class="fas fa-times"></i>
+                    <div class="row">
+                        <div class="work-col-1"><img src="./img/Analog Sketch-01.png" alt=""></div>
+                        <div class="work-col-2">
+                            <h1 class="work-title">Analog Sketch</h1>
                         <p>Transforming a sketch into a graphic illustration. I recreated and colored the sketch to breathe new life into the
-                        original concept. The final illustration showcases a harmonious blend of traditional sketching and digital artistry.</p>
+                            original concept. The final illustration showcases a harmonious blend of traditional sketching and digital artistry.
+                        </p>
                         <br>
-                        <p>Application Used:&nbsp;<em>Adobe Illustrator</em></p>
-                    </div>
-                </div>
-                <div class="work">
-                    <img src="./img/Affiche Prix Français Dagres copy.png" alt="">
-                    <div class="layer">
-                        <h3>Poster Advertisement</h3>
-                        <p>For the Prix Collégial du Cinéma Québécois 2024, I designed a promotional poster that captures the essence of the
-                        cinematic event. The visual elements aim to intrigue and invite participation in the celebration of Quebecois cinema.</p>
-                        <br>
-                        <p>Application Used:&nbsp;<em>Adobe Photoshop</em></p>
-                    </div>
-                </div>
-                <div class="work">
-                    <img src="./img/packaging design.png" alt="">
-                    <div class="layer">
-                        <h3>Vintage Packaging Design</h3>
-                        <p>For a soap brand, I delved into the Arts and Crafts design movement to inspire the creation of packaging. The resulting
-                        design blends vintage aesthetics with a modern touch, offering a unique and visually appealing product presentation.</p>
-                        <br>
-                        <p>Application Used:&nbsp;<em>Adobe Illustrator & Adobe Photoshop</em></p>
-                    </div>
-                </div>
-                <div class="work">
-                    <img src="./img/Magazine Cover Layout Dimitri Dagres.png" alt="">
-                
-                    <div class="layer">
-                        <h3>Magazine Cover</h3>
-                        <p>For a fictitious upscale real estate magazine, I created a captivating cover design that captures the essence of luxury
-                        living. The composition and visual elements work together to entice the audience and evoke a sense of sophistication.</p>
-                        <br>
-                        <p>Application Used:&nbsp;<em>Adobe InDesign</em></p>
-                    </div>
-                </div>
-                <div class="work">
-                    <img src="./img/Awareness Poster Dagres copy.png" alt="">
-                    <div class="layer">
-                        <h3>Awareness Poster</h3>
-                        <p>Addressing the urgent need to reduce greenhouse gas emissions, I created an awareness poster inspired by the World Wide
-                        Fund for Nature’s research. The poster visually communicates the effects of global warming on Polar Bears, aiming to
-                        inspire environmental consciousness.</p>
-                        <br>
-                        <p>Applications Used:&nbsp;<em>Adobe Photoshop & Adobe InDesign</em></p>
-                    </div>
-                </div>
-                <div class="work">
-                    <img src="./img/Composition 2 copy.png" alt="">
-                    <div class="layer">
-                        <h3>Photo Composition</h3>
-                        <p>In this project, I created a realistic-looking photo composition by skillfully combining various subjects and components
-                        from separate photos. The result is a visually cohesive and compelling image that demonstrates my proficiency in photo
-                        manipulation.</p>
-                        <br>
-                        <p>Application Used:&nbsp;<em>Adobe Photoshop</em></p>
-                    </div>
-                </div>
-                <div class="work">
-                    <img src="./img/PSA Dagres Billboard copy.jpg" alt="">
-                    <div class="layer">
-                        <h3>Public Service Announcement</h3>
-                        <p>Tasked with creating a PSA poster for organ donation in Alberta. I approached the design with a focus on conveying a
-                        powerful and impactful message. The resulting poster serves as a visual call to action, encouraging awareness and
-                        participation in organ donation initiatives.</p>
-                        <p>Applications Used:&nbsp;<em>Adobe Illustrator & Adobe Photoshop</em></p>
-                    </div>
-                </div>
-                <div class="work">
-                    <img src="./img/Francophonie Dagres.png" alt="">
-                    <div class="layer">
-                        <h3>Francophonie Poster</h3>
-                        <p>Inspired by the theme "La Magie de Mots !" for La Francophonie 2023 at Vanier College, I designed a vibrant and engaging
-                        poster. The project aimed to celebrate the richness of language and cultural diversity.</p>
-                        <br>
-                        <p>Application Used:&nbsp;<em>Adobe Illustrator</em></p>
-                    </div>
-                </div>
-                <div class="work">
-                    <img src="./img/Isometric Illustration-01.png" alt="">
-                    <div class="layer">
-                        <h3>Isometric Illustration</h3>
-                        <p>Utilizing isometric techniques and incorporating 3D elements, I crafted an illustrative depiction of a room during a rainy evening. This
-                        project demonstrates my ability to employ innovative design methods, enhancing the visual narrative with depth and
-                        dimension to create compelling and dynamic visuals.</p>
-                        <br>
-                        <p>Application Used:&nbsp;<em>Adobe Illustrator</em></p>
+                        <p>Software Used:&nbsp;<em>Adobe Illustrator</em></p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
 
-    <!-- contact -->
 
-    <div id="contact">
-        <div class="container">
-            <div class="row">
-                <div class="contact-left">
-                    <h1 class="sub-title">Contact Me</h1>
-                    <p><i class="fas fa-paper-plane"></i>dimitridagres@gmail.com</p>
-                    <p><i class="fas fa-phone-square-alt"></i>(514) 501-2729</p>
-                    <div class="social-icons">
-                        <a href="https://www.instagram.com/dimitri_ost/"><i class="fab fa-instagram"></i></a>
-                        <a href="https://www.linkedin.com/in/dimitri-dagres-936050237/"><i class="fab fa-linkedin"></i></a>
+
+            <div class="preview" data-target="w-3">
+                <div class="container">
+                    <i class="fas fa-times"></i>
+                    <div class="row">
+                        <div class="work-col-1"><img src="./img/Affiche Prix Français Dagres copy.png" alt=""></div>
+                        <div class="work-col-2">
+                            <h1 class="work-title">Poster Advertisement</h1>
+                            <p>For the Prix Collégial du Cinéma Québécois 2024, I designed a promotional poster that captures the essence of the
+                                cinematic event. The visual elements aim to intrigue and invite participation in the celebration of Quebecois
+                                cinema.</p>
+                            <br>
+                            <p>Software Used:&nbsp;<em>Adobe Photoshop</em></p>
+                        </div>
                     </div>
-                    <a href="./img/Dagres Resume.pdf" download class="btn">Download CV</a>
-                </div>
-                <div class="contact-right">
-                    <form name="submit-to-google-sheet">
-                        <input type="text" name="Name" placeholder="Your Name" required>
-                        <input type="email" name="Email" placeholder="Your Email" required>
-                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-                        <button type="submit" class="btn btn2">Submit</button>
-                    </form>
                 </div>
             </div>
-        </div>
-        <!-- <div class="copyright">
-            <p>Copyright © Dimitri Dagres</p>
-        </div> -->
-    </div>
 
-<script>
-    var tablinks = document.getElementsByClassName("tab-links");
-    var tabcontents = document.getElementsByClassName("tab-contents");
 
-     function opentab(tabname){
-        for(tablink of tablinks){
-            tablink.classList.remove("active-link");
-        }
-        for (tabcontent of tabcontents) {
-             tabcontent.classList.remove("active-tab");
-         }
-         event.currentTarget.classList.add("active-link");
-         document.getElementById(tabname).classList.add("active-tab");
-     }
 
-      document.addEventListener('DOMContentLoaded', function () {
-            var workItems = document.querySelectorAll('.work');
+            <div class="preview" data-target="w-4">
+                <div class="container">
+                    <i class="fas fa-times"></i>
+                    <div class="row">
+                        <div class="work-col-1"><img src="./img/packaging design.png" alt=""></div>
+                        <div class="work-col-2">
+                            <h1 class="work-title">Vintage Packaging Design</h1>
+                            <p>For a soap brand, I delved into the Arts and Crafts design movement to inspire the creation of packaging. The
+                                resulting
+                                design blends vintage aesthetics with a modern touch, offering a unique and visually appealing product presentation.
+                            </p>
+                            <br>
+                            <p>Software Used:&nbsp;<em>Adobe Illustrator & Adobe Photoshop</em></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-            workItems.forEach(function (workItem) {
-                workItem.addEventListener('click', function () {
-                    this.classList.toggle('active');
-                });
-            });
-        });
 
-    var sidemenu = document.getElementById("sidemenu");
 
-    function openmenu(){
-        sidemenu.style.right = "0";
-    }
-     function closemenu() {
-            sidemenu.style.right = "-200px";
-        }
+            <div class="preview" data-target="w-5">
+                <div class="container">
+                    <i class="fas fa-times"></i>
+                    <div class="row">
+                        <div class="work-col-1"><img src="./img/Magazine Cover Layout Dimitri Dagres.png" alt=""></div>
+                        <div class="work-col-2">
+                            <h1 class="work-title">Magazine Cover</h1>
+                            <p>For a fictitious upscale real estate magazine, I created a captivating cover design that captures the essence of
+                                luxury
+                                living. The composition and visual elements work together to entice the audience and evoke a sense of
+                                sophistication.</p>
+                            <br>
+                            <p>Software Used:&nbsp;<em>Adobe InDesign</em></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="preview" data-target="w-6">
+                <div class="container">
+                    <i class="fas fa-times"></i>
+                    <div class="row">
+                        <div class="work-col-1"><img src="./img/Awareness Poster Dagres copy.png" alt=""></div>
+                        <div class="work-col-2">
+                            <h1 class="work-title">Awareness Poster</h1>
+                            <p>Addressing the urgent need to reduce greenhouse gas emissions, I created an awareness poster inspired by the World
+                                Wide
+                                Fund for Nature’s research. The poster visually communicates the effects of global warming on Polar Bears, aiming to
+                                inspire environmental consciousness.</p>
+                            <br>
+                            <p>Softwares Used:&nbsp;<em>Adobe Photoshop & Adobe InDesign</em></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="preview" data-target="w-7">
+                <div class="container">
+                    <i class="fas fa-times"></i>
+                    <div class="row">
+                        <div class="work-col-1"><img src="./img/Composition 2 copy.png" alt=""></div>
+                        <div class="work-col-2">
+                            <h1 class="work-title">Photo Composition</h1>
+                        <p>In this project, I created a realistic-looking photo composition by skillfully combining various subjects and
+                            components
+                            from separate photos. The result is a visually cohesive and compelling image that demonstrates my proficiency in
+                            photo
+                            manipulation.</p>
+                        <br>
+                        <p>Software Used:&nbsp;<em>Adobe Photoshop</em></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="preview" data-target="w-8">
+                <div class="container">
+                    <i class="fas fa-times"></i>
+                    <div class="row">
+                        <div class="work-col-1"><img src="./img/PSA Dagres Billboard copy.jpg" alt=""></div>
+                        <div class="work-col-2">
+                            <h1 class="work-title">Public Service Announcement</h1>
+                            <p>Tasked with creating a PSA poster for organ donation in Alberta. I approached the design with a focus on conveying a
+                                powerful and impactful message. The resulting poster serves as a visual call to action, encouraging awareness and
+                                participation in organ donation initiatives.</p>
+                            <p>Softwares Used:&nbsp;<em>Adobe Illustrator & Adobe Photoshop</em></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
 
      
-</script>
-<script>const scriptURL = '<https://script.google.com/macros/s/AKfycbxm2vQJxjNcaG6EtRACLM-yT1_BhARRsGBHFYs9k6x-WYZbQi1PUYFtVL9A93fTfuJ7/exec>'
-    const form = document.forms['submit-to-google-sheet']
+            <div class="preview" data-target="w-9">
+                <div class="container">
+                    <i class="fas fa-times"></i>
+                    <div class="row">
+                        <div class="work-col-1"><img src="./img/Amy Winehouse.png" alt=""></div>
+                        <div class="work-col-2">
+                            <h1 class="work-title">Amy Winehouse Album Cover</h1>
+                            <p>In my reimagined version of Amy Winehouse's "Back to Black" album cover, I used saturation to symbolize
+                                life's numbness
+                                and visually conveyed her struggle with drugs through the allure of drug-associated colors.</p>
+                            <br>
+                            <p>Software Used:&nbsp;<em>Adobe Photoshop</em></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+  
 
-    form.addEventListener('submit', e => {
-        e.preventDefault()
-        fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-            .then(response => console.log('Success!', response))
-            .catch(error => console.error('Error!', error.message))
-    })</script>
-    
-</body>
-</html>
+        <!-- contact -->
+
+        <div id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="contact-left">
+                        <h1 class="sub-title">Contact Me</h1>
+                        <p><i class="fas fa-paper-plane"></i>dimitridagres@gmail.com</p>
+                        <p><i class="fas fa-phone-square-alt"></i>(514) 501-2729</p>
+                        <div class="social-icons">
+                            <a href="https://www.instagram.com/dimitri_ost/"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.linkedin.com/in/dimitri-dagres-936050237/"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                        <a href="./img/Dagres Resume.pdf" download class="btn">Download Portfolio</a>
+                    </div>
+                    <div class="contact-right">
+                        <form name="submit-to-google-sheet">
+                            <input type="text" name="Name" placeholder="Your Name" required>
+                            <input type="email" name="Email" placeholder="Your Email" required>
+                            <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                            <button type="submit" class="btn btn2">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="copyright">
+                <p>Copyright © Dimitri Dagres</p>
+            </div> -->
+        </div>
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+                var workItems = document.querySelectorAll('.work');
+
+                workItems.forEach(function (workItem) {
+                    workItem.addEventListener('click', function () {
+                        this.classList.toggle('active');
+                    });
+                });
+            });
+
+        var sidemenu = document.getElementById("sidemenu");
+
+        function openmenu(){
+            sidemenu.style.right = "0";
+        }
+        function closemenu() {
+                sidemenu.style.right = "-200px";
+            }
+
+        
+    </script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxm2vQJxjNcaG6EtRACLM-yT1_BhARRsGBHFYs9k6x-WYZbQi1PUYFtVL9A93fTfuJ7/exec';
+        const form = document.forms['submit-to-google-sheet'];
+
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                    console.log('Success!', response);
+                    // Reset the form after successful submission
+                    form.reset();
+                })
+                .catch(error => console.error('Error!', error.message));
+        });
+    </script>
+    <script>
+        let previewContainer = document.querySelector(".work-preview");
+            let previewBox = Array.from(previewContainer.querySelectorAll(".preview"));
+
+            document.querySelectorAll('.work-list .work').forEach(work => {
+                work.onclick = () => {
+                    // Show the preview container
+                    previewContainer.style.display = "flex";
+
+                    // Get the data-name attribute value from the clicked work item
+                    let name = work.getAttribute('data-name');
+
+                    // Iterate through preview elements
+                    previewBox.forEach(preview => {
+                        // Get the data-target attribute value from the preview element
+                        let target = preview.getAttribute('data-target');
+
+                        // Check if the data-name matches the data-target
+                        if (name === target) {
+                            // Add the 'active' class to show the preview
+                            preview.classList.add('active');
+                        }
+                    });
+                };
+            });
+
+            // Close button event handling for each preview
+            previewBox.forEach(close => {
+                close.querySelector('.fa-times').onclick = () => {
+                    // Remove the 'active' class to hide the preview
+                    close.classList.remove('active');
+                    // Hide the preview container
+                    previewContainer.style.display = "none";
+                };
+            });
+
+
+    </script>
+        
+    </body>
+    </html>
