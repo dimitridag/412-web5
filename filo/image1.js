@@ -5,18 +5,12 @@ document.addEventListener("DOMContentLoaded", function () {
     const header = document.querySelector(".header");
     const fixedBackground = document.getElementById("fixed-background");
     const sections = document.querySelectorAll('#mission');
-    const windowHeight = window.innerHeight;
-
-    // Add a reference to the contact section
     const contactSection = document.querySelector('#contact');
-
-    // Call revealImage initially to check if the section is in view on page load
-    revealImage();
-    handleContactIntersection();
+    const downloadButton = document.getElementById('download');
+    const windowHeight = window.innerHeight;
 
     window.addEventListener("scroll", () => {
         revealImage();
-        handleContactIntersection();
     });
 
     function revealImage() {
@@ -29,14 +23,12 @@ document.addEventListener("DOMContentLoaded", function () {
         fixedBackground.style.opacity = imageOpacity;
 
         // Calculate the opacity for the header
-        const headerOpacity = Math.min(1, scrollPosition / windowHeight);
+        const headerOpacity = Math.min(1, scrollPosition / (windowHeight * 0.5));
+        header.style.backgroundColor = `rgba(255, 255, 255, ${headerOpacity})`;
 
-        // Set the header background opacity
-        header.style.backgroundColor = `rgba(255, 255, 255, ${headerOpacity}`;
-
-        // Add a box shadow to the header as it appears
-        const boxShadowOpacity = headerOpacity * 0.2; // Adjust the opacity as needed
-        header.style.boxShadow = `0 2px 4px rgba(0, 0, 0, ${boxShadowOpacity})`;
+        // Calculate the opacity for the button
+        const buttonOpacity = 1 - scrollPosition / (windowHeight * 4);
+        downloadButton.style.opacity = buttonOpacity;
 
         // Reveal other sections when in view
         sections.forEach(function (section) {
@@ -46,20 +38,20 @@ document.addEventListener("DOMContentLoaded", function () {
                 section.classList.add('active');
             }
         });
-    }
 
-    function handleContactIntersection() {
-        // Get the bounding rectangle of the contact section
+        // Check if the contact section is in view
         const contactRect = contactSection.getBoundingClientRect();
 
-        // Check if the contact section is in the viewport
         if (contactRect.top < windowHeight && contactRect.bottom >= 0) {
             // Calculate the opacity based on the position of the contact section
-            const opacity = 1 - (contactRect.bottom / windowHeight);
+            const opacity = 2 - (contactRect.bottom / windowHeight);
             const backgroundColor = `rgba(50, 106, 176, ${opacity})`;
 
             // Set the background color of the body
             document.body.style.backgroundColor = backgroundColor;
+        } else {
+            // Set the background color to white
+            document.body.style.backgroundColor = 'rgba(255, 255, 255, 1)';
         }
     }
 });

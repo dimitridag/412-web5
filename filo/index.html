@@ -10,32 +10,56 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https:/">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500&family=Raleway:wght@400;600&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="/path/to/flickity.css" media="screen">
+    <script src="https://kit.fontawesome.com/6b0af4bcb3.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <header class="header">
-        <nav>
-            <ul class="menu">
-                <li><a href="#mission">
-                        <h2>Mission</h2>
-                    </a></li>
-                <li><a href="#testimonial-container">
-                        <h2>Testimonials</h2>
-                    </a></li>
-                <li><a href="#contact">
-                        <h2>Contact</h2>
-                    </a></li>
-            </ul>
-        </nav>
+<header class="header">
+    <nav class="navbar">
         <div class="logo">
             <img src="img/Filo Final-01.png" alt="Logo">
         </div>
-    </header>
+        <i class="fas fa-bars" id="mobile-menu-icon" onclick="toggleMenu()"></i>
+        <ul class="menu">
+            <li><a href="#mission">
+                    <h2>Mission</h2>
+                </a></li>
+            <li><a href="#testimonial">
+                    <h2>Testimonials</h2>
+                </a></li>
+            <li><a href="#contact">
+                    <h2>Contact</h2>
+                </a></li>
+        </ul>
+    </nav>
+</header>
+<div id="mobile-menu">
+    <ul class="menu">
+        <li><a href="#mission">
+                <h2>Mission</h2>
+            </a></li>
+        <li><a href="#testimonial">
+                <h2>Testimonials</h2>
+            </a></li>
+        <li><a href="#contact">
+                <h2>Contact</h2>
+            </a></li>
+    </ul>
+</div>
+
     <section class="image-section">
-        <div id="fixed-background"></div>
+        <div id="fixed-background">
+            <div id="down"><a href="" id="download"><button>
+            
+                        <h1>Download</h1>
+                    </button></a></div>
+        </div>
     </section>
+   
     <main>
         <section id="mission">
             <h3>Mission</h3>
@@ -50,7 +74,7 @@
             </p>
         </section>
         <div id="waves"></div>
-        <div id="testimonial-container">
+        <!-- <div id="testimonial-container">
             <h3>Testimonials</h3>
             <div class="testimonials">
                 <div class="testimonial">
@@ -71,7 +95,6 @@
                         good!"</p>
                     <p><em>- Alex</em></p>
                 </div>
-                <!-- Add two more testimonials to make a total of five -->
                 <div class="testimonial">
                     <p>"Being new in town can be lonely, but Filo made the transition a breeze. I met Ryan, an adventure
                         enthusiast, and we've hiked, biked, and explored our new city together. Thanks, Filo, for the
@@ -81,10 +104,37 @@
             </div>
             <button id="prev">Previous</button>
             <button id="next">Next</button>
-        </div>
+        </div> -->
+
+        <section id="testimonial">
+            <h3>Testimonials</h3>
+    <div class="carousel" id="carousel" data-flickity='{ "wrapAround": true }'>
+        <div class="carousel-cell"><p>"Filo has been a game-changer for me. As a guy seeking meaningful connections, I found a group of
+            like-minded buddies through this app. Our bromance is real, and we share interests and
+            adventures like never before. Thanks, Filo!"</p>
+        <p><em>- John</em></p></div>
+        <div class="carousel-cell"><p>"Who says guys can't make friends? Filo makes it possible! I've met Jake, my gym buddy, and
+            together, we've conquered fitness goals and had a blast. True friendships exist, and Filo
+            brought us together."</p>
+        <p><em>- Mark</em></p></div>
+        <div class="carousel-cell"><p>"I was skeptical at first, but Filo exceeded my expectations. I've connected with Chris, a fellow
+            foodie, and now we explore new cuisines and restaurants. Platonic friendships never tasted so
+            good!"</p>
+        <p><em>- Alex</em></p></div>
+        <div class="carousel-cell"><p>"Being new in town can be lonely, but Filo made the transition a breeze. I met Ryan, an adventure
+            enthusiast, and we've hiked, biked, and explored our new city together. Thanks, Filo, for the
+            best buddy a guy could ask for!"</p>
+        <p><em>- Max</em></p></div>
+        <div class="carousel-cell"><p>"Filo has been a revelation for me. Being a movie buff, I connected with Sarah, a fellow film enthusiast, through the
+            app. Now, we have our own movie marathon nights, and discussing our favorite films has become a cherished ritual.
+            Filo truly brings people together!"</p>
+        <p><em>- Jason</em></p></div>
+    </div>
+    </section>
+
         <section id="contact" class="contact">
-            <h3>Contact</h3>
-            <div class="contact-content">
+
+            <!-- <div class="contact-content">
                 <div class="contact-image">
                     <img src="montreal-image.jpg" alt="Montreal">
                 </div>
@@ -94,18 +144,77 @@
                         dolores totam aspernatur eligendi aperiam nulla porro hic, minus ullam perferendis sit dolore at.
                     </p>
                 </div>
-            </div>
+            </div> -->
             <div id="background-container">
-                <!-- Add your contact section content here -->
+                <h3>Contact</h3>
+                <div class="contact-wrapper">
+                
+                    <!-- Left contact page -->
+                
+                    <form id="contact-form" class="form-horizontal" role="form">
+                
+                        <div class="form-group">
+                            <div class="col-sm-12">
+                                <input type="text" class="form-control" id="name" placeholder="NAME" name="name" value="" required>
+                            </div>
+                        </div>
+                
+                        <div class="form-group">
+                            <div class="col-sm-12">
+                                <input type="email" class="form-control" id="email" placeholder="EMAIL" name="email" value="" required>
+                            </div>
+                        </div>
+                
+                        <textarea class="form-control" rows="10" placeholder="MESSAGE" name="message" required></textarea>
+                
+                        <button class="btn btn-primary send-button" id="submit" type="submit" value="SEND">
+                            <div class="alt-send-button">
+                                <i class="fa fa-paper-plane"></i><span class="send-text">SEND</span>
+                            </div>
+                
+                        </button>
+                
+                    </form>
+                
+                    <!-- Left contact page -->
+                
+                    <div class="direct-contact-container">
+                
+                        <ul class="contact-list">
+                            <li class="list-item"><i class="fa fa-map-marker fa-2x"><span class="contact-text place">Montréal, Québec, Canada</span></i></li>
+                
+                            <li class="list-item"><i class="fa fa-phone fa-2x"><span class="contact-text phone"><a
+                                            href="tel:1-212-555-5555" title="Give me a call">(514) 555-2368</a></span></i></li>
+                
+                            <li class="list-item"><i class="fa fa-envelope fa-2x"><span class="contact-text gmail"><a href="mailto:#"
+                                            title="Send me an email"> contact@filo.com</a></span></i></li>
+                
+                        </ul>
             </div>
         </section>
     </main>
     <footer>
-        <section>&copy; Dimitri 2023</section>
+        <section>&copy; Filo inc. 2023</section>
     </footer>
+    <script>
+     var mobileMenuIcon = document.getElementById("mobile-menu-icon");
+        var mobileMenu = document.getElementById("mobile-menu");
+
+        mobileMenuIcon.addEventListener("click", function () {
+            if (mobileMenu.style.display === "" || mobileMenu.style.display === "none") {
+                mobileMenu.style.display = "flex";
+            } else {
+                mobileMenu.style.display = "none";
+            }
+        });
+
+    </script>
     <script src="image1.js"></script>
     <script src="image2.js"></script>
     <script src="testimonial.js"></script>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script src="/path/to/flickity.pkgd.min.js"></script>
+
 </body>
 
 </html>

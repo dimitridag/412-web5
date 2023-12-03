@@ -1,8 +1,4 @@
-/* * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-} */
+
 
 html{
     scroll-behavior: smooth;
@@ -12,14 +8,18 @@ body{
     padding: 0;
     /* width: 100%; */
     margin: 0;
+    background-color: white;
 }
+body>* {
+        padding: 2rem 25vw;
+    }
 
 header {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    background-color: rgba(255, 255, 255, 0);
+    /* background-color: rgba(255, 255, 255, 0); */
         /* Transparent background */
         box-shadow: none;
         /* No shadow initially */
@@ -31,7 +31,67 @@ header {
     font-family: 'Baloo 2', sans-serif;
         font-weight: 600;
         z-index: 4;
-        height: 6vh;
+        height: 10vh;
+        /* height: 8%; */
+}
+/* Add this CSS to your existing styles */
+
+/* Add this to your existing CSS */
+#mobile-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: -115px;
+    width: 25%;
+    height: 100%;
+    background: #ffffff;
+    flex-direction: column;
+    align-items: left;
+    /* justify-content: center; */
+    z-index: 2;
+}
+
+/* Update these styles in your existing CSS */
+#mobile-menu .menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    /* Stack items vertically */
+    align-items: flex-start;
+    /* Justify items to the left */
+}
+
+#mobile-menu .menu li {
+    /* margin: 10px 0; */
+    /* Adjust the spacing between items */
+    text-align: left;
+    margin-left: 20px;
+    /* Align text to the left */
+}
+
+#mobile-menu .menu a:link,
+#mobile-menu .menu a:visited {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: .5em;
+    /* Adjust the font size as needed */
+    font-family: 'Baloo 2', sans-serif;
+    /* Use the same font-family as the original menu */
+}
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
 }
 
 .menu {
@@ -39,7 +99,7 @@ header {
     padding: 0;
     margin: 0;
     display: flex;
-    align-items: center;
+    align-items: left;
     
 }
 
@@ -64,7 +124,7 @@ header {
 }
 
 .logo {
-    display: flex;
+    /* display: flex; */
     align-items: center;
     position: absolute;
     left: 50%;
@@ -76,7 +136,7 @@ header {
     height: 100vh;
     /* Ensure the section covers the viewport height */
     overflow: hidden;
-    display: flex;
+    /* display: flex    ; */
     justify-content: center;
     align-items: center;
 }
@@ -91,7 +151,7 @@ header {
     background-repeat: no-repeat;
     background-size: cover;
     /* Make the image cover the entire section */
-    background-position: center;
+    /* background-position: center; */
 }
 
 #down {
@@ -147,17 +207,6 @@ font-family: 'Baloo 2', sans-serif;
     
 }
 
-
-/* #friend{
-    font-size: 5em;
-        font-family: 'Baloo 2';
-        font-weight: 600;
-        align-items: center;
-        padding-top: 16vh;
-        color: white;
-        text-shadow: 4px 4px 6px rgba(0, 0, 0, 1);
-} */
-
 p{
     font-family: 'Raleway';
     font-weight: 400;
@@ -190,136 +239,215 @@ p{
     position: relative;
     width: 100%;
     height: 50vh;
-    margin-top: -35%;
-    margin-bottom: -20%;
+    margin-top: -70%;
+    /* margin-bottom: -15%; */
 }
 
 #waves::before {
     content: "";
     position: absolute;
-    /* Position the wave within the container */
-    top: -80%;
-    left: 0;
-    width: 100%;
-    height: 0;
+    left: -200%;
+    width: 200%;
+    height: 125%;
     background-image: url('img/waves.png');
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: 0% 0;
     z-index: 1;
-    opacity: 1;
-    transition: height 2s ease;
-    background-color: rgba(255, 255, 255, 1);
+    opacity: 0;
+    transition: left 2s ease, opacity 3s ease;
 }
 
 #waves.active::before {
-    height: 100%;
+    left: -50%;
     opacity: 0.90;
 }
 
-/* Add styles for the testimonials container and controls as needed */
-/* Add styles for the testimonials container and controls as needed */
-#testimonial-container {
-    width: 100%;
-    margin: 0 auto;
-    text-align: center;
-    overflow: hidden;
-    white-space: nowrap;
-    position: relative;
-    padding-top: 10vh;
-    padding-bottom: 20vh;
+#testimonial {
+    padding-top: 8vh;
 }
 
-.testimonials {
+.carousel-cell {
     display: flex;
-    transition: transform 0.5s ease;
-}
-
-.testimonial {
-    flex: 0 0 33.33%;
-    width: 25%;
-    padding: 20px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 200px;
+    margin: 0 60px;
+    background: rgba(50, 106, 176, 100);
+    border-radius: 5px;
+    counter-increment: carousel-cell;
     text-align: center;
-    border-radius: 10px;
-        background-color: transparent;
-        border: 8px solid white;
-        text-decoration: none;
-        box-shadow: 0 0 10px rgba(50, 106, 176, 100);
-        margin: .8em;
-        margin-bottom: 10vh;
-        overflow: hidden;
+    
 }
 
-.testimonial p {
+.carousel-cell p {
     margin: 0;
-    padding: 10px;
+    padding: 0 45px;
     white-space: normal;
     word-wrap: break-word;
     overflow: hidden;
     max-height: 200px;
-    
-}
-
-button {
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    font-size: 18px;
-}
-
-#prev {
-    float: left;
-    font-family: 'Baloo 2', sans-serif;
-        font-weight: 400;
-}
-
-#next {
-    float: right;
-    font-family: 'Baloo 2', sans-serif;
-        font-weight: 400;
-}
-
-.controls {
-    text-align: center;
-}
-
-button {
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    font-size: 18px;
-}
-
-#prev {
-    float: left;
-}
-
-#next {
-    float: right;
-}
-
-#testimonial p {
+    color: white;
     font-family: 'Raleway';
-    font-weight: 400;
-    font-size: 1.7em;
-    margin-top: 0;
+        font-weight: 400;
 }
 
+/* cell number */
+.carousel-cell:before {
+    display: block;
+    text-align: center;
+    /* content: counter(carousel-cell); */
+    line-height: 200px;
+    font-size: 80px;
+    color: white;
+}
 
-#mission, #contact{
+#mission{
     margin-bottom: 30vh;
 }
 
 #contact h3{
     color: white;
+    padding-top: 20vh;
 }
 
 .contact-background {
     background-color: rgba(12, 37, 119, 100);
     transition: background-color 0.5s;
-    padding-top: 10vh;
+    /* padding-top: 10vh; */
 }
 
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    /* padding-bottom: 100px; */
+}
+
+/* #contact {
+    width: 100%;
+    height: 100%;
+} */
+
+.contact-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+    max-width: 840px;
+}
+
+/* Left contact page */
+/* Left contact page */
+.form-horizontal {
+    max-width: 400px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    /* Adjust the margin as needed */
+}
+
+.form-control,
+textarea {
+    width: 100%;
+    padding: 10px;
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    border-radius: 10px;
+    /* Add rounded edges */
+    font-family: 'Raleway';
+    font-weight: 400;
+}
+
+.form-control::placeholder,
+textarea::placeholder {
+    color: white;
+    opacity: 0.7;
+    /* Adjust the opacity as needed */
+}
+
+.send-button {
+    margin: 0 auto;
+    width: 60%;
+    height: 40px;
+    margin-top: 18px;
+    overflow: hidden;
+    border: 2px solid white;
+    border-radius: 10px;
+    /* Add rounded edges */
+    background-color: transparent;
+    color: white;
+    font-family: 'Raleway';
+    font-weight: 400;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.send-button:hover {
+    background-color: white;
+    color: rgba(12, 37, 119, 100);
+}
+
+.send-text {
+    display: block;
+    font: 700 12px 'Lato', sans-serif;
+    letter-spacing: 2px;
+}
+
+/* End Left contact page */
+
+/* Begin Right Contact Page */
+.direct-contact-container {
+    max-width: 400px;
+}
+
+/* Location, Phone, Email Section */
+.contact-list {
+    list-style-type: none;
+    margin-left: -30px;
+    padding-right: 20px;
+}
+
+.list-item {
+    line-height: 4;
+    color: white;
+}
+
+.contact-text {
+    font: 300 18px 'Lato', sans-serif;
+    letter-spacing: 1.9px;
+    color: white;
+}
+
+.place {
+    margin-left: 62px;
+}
+
+.phone {
+    margin-left: 56px;
+}
+
+.gmail {
+    margin-left: 53px;
+}
+
+.contact-text a {
+    color: white;
+    text-decoration: none;
+    transition-duration: 0.2s;
+}
+
+.contact-text a:hover {
+    color: #fff;
+    text-decoration: none;
+}
 
 
 footer{
@@ -329,12 +457,13 @@ footer{
     margin: 0 auto;
         text-align: center;
     color: white;
+    
 }
 
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 600px) {
     body>* {
-        padding: 2rem 15vw;
+        padding: 2rem a5vw;
     }
 
     header{
@@ -344,12 +473,142 @@ footer{
     header {
         grid-template-columns: auto 1fr;
     }
-         #waves::before {
-             top: -30%;
-             /* Adjust this value for smaller screens */
-         }
+    
+    
 }
+@media only screen and (max-width: 600px) {
+    
+    #mobile-menu-icon {
+            display: block;
+        }
+    
+        .navbar .menu {
+            display: none;
+        }
+    
+        .navbar.show .menu {
+            display: flex;
+            flex-direction: column;
+            background: #262626;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            z-index: 1;
+        }
+    
+        .navbar .menu li {
+            margin: 10px 0;
+            text-align: center;
+        }
+    
+        #mobile-menu-icon {
+            display: block;
+        }
+    
+        header nav ul {
+            display: none;
+        }
+                #waves {
+                    display: none;
+                }
+        
+                #fixed-background::before {
+                    display: none;
+                }
+        h3{
+            font-size: 2em;
+        }
+                #download button {
+                    border-radius: 25px;
+                    background-color: transparent;
+                    border: 4px solid white;
+                    text-decoration: none;
+                    /* Add a box shadow to the button border */
+                    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        
+                    /* Add a text shadow to the button text */
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+                }
+        
+                #download h1 {
+                    font-family: 'Baloo 2', sans-serif;
+                    font-weight: 600;
+                    font-size: 4em;
+                    color: white;
+                    margin: 0;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+                }
+            
+                                #pmission {
+                                    font-size: 1em;
+                                    margin: -2rem -10vw;
+                                }
+                #testimonial{
+                    margin: -2rem -25vw;
+                    margin-top: -50vh;
+                }
+                #testimonial p{ 
+                    font-size: 1em;
+                }
+                                .carousel-cell {
+                                    display: flex;
+                                    flex-direction: column;
+                                    justify-content: center;
+                                    align-items: center;
+                                    width: 100%;
+                                    height: fit-content;
+                                    padding: 0 60px;
+                                    background: rgba(50, 106, 176, 100);
+                                    border-radius: 5px;
+                                    counter-increment: carousel-cell;
+                                    text-align: center;
+                
+                                }
+                
+                                .carousel-cell p {
+                                    margin: 0;
+                                    padding: 45px 45px;
+                                    white-space: normal;
+                                    word-wrap: break-word;
+                                    overflow: hidden;
+                                    height: fit-content;
+                                    /* max-height: 200px; */
+                                    color: white;
+                                    font-family: 'Raleway';
+                                    font-weight: 400;
+                                }
+                                .contact-wrapper{
+                                    margin: -2rem -25vw;
+                                }
+                                .direct-contact-container{
+                                    max-width: 200px;
+                                    
+                                }
+                                .contact-list{
+                                    margin-left: 5px;
 
+                                }
+                                .contect-text{
+                                    font-size: 10px;
+                                }
+}
+@media only screen and (min-width: 601px) {
+
+    /* Styles for screens larger than 600px */
+    #mobile-menu-icon {
+        display: none;
+    }
+
+    header nav ul {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .navbar.show .menu {
+        display: none;
+    }
+}
 @media screen and (min-width: 1600px) {
     body>* {
         padding: 2rem 25vw;
@@ -362,4 +621,5 @@ footer{
     header nav ul li a {
         padding: 2rem;
     }
+    
 }
